@@ -1,0 +1,52 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/editoriales/listaeditoriales" method="post">
+                        <div class="form group">
+                            <h2>Agregar  Editoriales</h2>
+                        </div>
+                        <label for="">Editorial</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="editorial" id="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Editorial</h1>
+       <table id="example" class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_editorial</th>
+            <th scope="col">editorial</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each editorial}}
+        <tr>
+            <th scope="row">{{id_editorial}}</th>
+            <td>{{editorial}}</td>
+            
+            <td>
+
+                <a href="eliminar/{{id_editorial}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>

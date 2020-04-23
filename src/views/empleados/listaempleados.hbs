@@ -1,0 +1,73 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/Libros/listalibros" method="post">
+                        <div class="form group">
+                            <h2>Agregar  Empleados</h2>
+                        </div>
+                        <label for="">nombre</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nombre" id="">
+                        </div>
+                        <label for="">apellido</label>
+                        <div class="form-group">
+                            <input class="form-control"  type="text" name="apellido" id="">
+                        </div>
+                        <label for="">cargo</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="cargo" id="">
+                        </div>
+                        <label for="">edad</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="edad" id="">
+                        </div>
+                        <label for="">telefono</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="telefono" id="">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Libros</h1>
+       <table id="example" class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_Libro</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Fecha Lanzamiento</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Editorial</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each Libro}}
+        <tr>
+            <th scope="row">{{id_Libro}}</th>
+            <td>{{titulo}}</td>
+            <td>{{fecha_lanzamiento}}</td>
+            <td>{{autor}}</td>
+            <td>{{categoria}}</td>
+            <td>{{editorial}}</td>
+            <td>
+
+                <a href="eliminar/{{id_Libro}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,67 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/detalle_libro/listadetalle" method="post">
+                        <div class="form group">
+                            <h2>Agregar Detalle_Libro</h2>
+                        </div>
+                        <label for="">Nombre</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nombre" id="">
+                        </div>
+                        <label for="">Descripcion</label>
+                        <div class="form-group">
+                            <input class="form-control"  type="text" name="descripcion" id="">
+                        </div>
+                        <label for="">Editorial</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="editorial" id="">
+                        </div>
+                         <label for="">Precio</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="precio" id="">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Detalle_Libro</h1>
+       <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_detalle</th>
+            <th scope="col">nombre</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">editorial</th>
+            <th scope="col">precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each detalle}}
+        <tr>
+            <th scope="row">{{id_detalle}}</th>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{editorial}}</td>
+            <td>{{precio}}</td>
+            <td>
+
+                <a href="eliminar/{{id_detalle}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>

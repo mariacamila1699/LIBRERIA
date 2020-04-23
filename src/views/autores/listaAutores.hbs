@@ -1,0 +1,52 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/autores/listaAutores" method="post">
+                        <div class="form group">
+                            <h2>Agregar  Autor</h2>
+                        </div>
+                        <label for="">Nombre Autor</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nombre_autor" id="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Autores</h1>
+       <table id="example" class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_autor</th>
+            <th scope="col">Nombre Autor</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each autor}}
+        <tr>
+            <th scope="row">{{id_autor}}</th>
+            <td>{{nombre_autor}}</td>
+            
+            <td>
+
+                <a href="eliminar/{{id_autor}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>

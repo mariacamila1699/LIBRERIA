@@ -1,0 +1,64 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/biblioteca/listabiblioteca" method="post">
+                        <div class="form group">
+                            <h2>Agregar  Biblioteca</h2>
+                        </div>
+                        <label for="">Ciudad</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="ciudad" id="">
+                        </div>
+                        <label for="">Telefono</label>
+                        <div class="form-group">
+                            <input class="form-control"  type="text" name="telefono" id="">
+                        </div>
+                        <label for="">Direccion</label>
+                         <div class="form-group">
+                            <input class="form-control" type="text" name="direccion" id="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Biblioteca</h1>
+       <table id="example" class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_biblioteca</th>
+            <th scope="col">ciudad</th>
+            <th scope="col">telefono</th>
+            <th scope="col">direccion</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each biblioteca}}
+        <tr>
+            <th scope="row">{{id_biblioteca}}</th>
+            <td>{{ciudad}}</td>
+            <td>{{telefono}}</td>
+            <td>{{direccion}}</td>
+            
+            <td>
+
+                <a href="eliminar/{{id_biblioteca}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>

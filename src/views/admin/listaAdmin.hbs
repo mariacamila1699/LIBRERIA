@@ -1,0 +1,64 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/admin/listaAdmin" method="post">
+                        <div class="form group">
+                            <h2>Agregar  Admin</h2>
+                        </div>
+                        <label for="">Usuario</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="usuario" id="">
+                        </div>
+                        <label for="">Contraseña</label>
+                        <div class="form-group">
+                            <input class="form-control"  type="text" name="contra" id="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-block">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="col-md-8"> 
+    <div class="card-body">
+        <h1>Datos Tabla Admin</h1>
+       <table id="example" class="table">
+        <thead>
+        <tr>
+            <th scope="col">id_Admin</th>
+            <th scope="col">usuario</th>
+            <th scope="col">contraseña</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each admin}}
+        <tr>
+            <th scope="row">{{id_admin}}</th>
+            <td>{{usuario}}</td>
+            <td>{{contra}}</td>
+            
+            <td>
+
+                <a href="eliminar/{{id_admin}}" class="btn btn-danger">Eliminar</a>
+                <a href="" class="btn btn-info">Modificar</a>
+                
+            </td>
+        </tr>
+      {{/each}}  
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+
+
+
+    
